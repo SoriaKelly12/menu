@@ -5,7 +5,7 @@
 using namespace std;
 
 void menu();
-
+char *strpbrk1(const char *cadena, const char *buscar);
 void menu() {
     int op;
 
@@ -130,16 +130,47 @@ void menu() {
                 system("pause");
                 break;
                 }
-            case 9:
+
+            case 9:{
                 printf("\nUsted selecciono el Programa 9\n");
+                system("cls");
+                printf("---PROGRAMA DE MARIA JOSE MANZO---\n");
+                printf("---USO DE LA FUNCION STRPBRK---\n");
+
+                char cadena[50];
+                char buscar[50];
+                char *resultado;
+
+                printf("Ingrese una palabra (sin espacios): ");
+                cin >> cadena;
+
+                printf("Ingrese los caracteres a buscar: ");
+                cin >> buscar;
+
+                printf resultado = strpbrk1(cadena, buscar);
+                printf("\nRESULTADO\n");
+
+
+                if(resultado !=NULL)
+                {
+                  printf("Se encontro una coincidencia.\n");
+                  printf("Texto desde la coincidencia: %s\n", resultado);
+                }
+                else
+                {
+                    printf("No se encontro ninguna coincidencia.\n");
+                }
+
+                printf("\n");
                 system("pause");
                 break;
+
+                }
 
             case 10:
                 printf("\nUsted selecciono el Programa 10\n");
                 system("pause");
                 break;
-
             case 11:
                 printf("\nUsted selecciono el Programa 11\n");
                 system("pause");
@@ -201,7 +232,32 @@ void menu() {
 
     } while(op != 21);
 }
+//protipo de strpbrk  mariajosemanzo
+char *strpbrk1(const char *cadena, const char *buscar)
+{
+     const char *p;
+     while(*cadena !='\0')
+     {
+     p = buscar;
+     while(*p !='\0')
+     {
+         if(*cadena==*p)
+         {
+            return (char *)cadena;
+         }
 
+         p++;
+
+         }
+
+         cadena++;
+
+         }
+
+         return NULL;
+
+     }
+// FIN DEL PROTOTIPO//
 int main() {
     menu();
     return 0;
