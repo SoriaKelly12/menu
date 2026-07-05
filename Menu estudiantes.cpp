@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h> // <--- ESTA DEBE ESTAR ARRIBA PARA QUE INCLUYA EL STRCHR
 using namespace std;
 
 void menu();
@@ -73,11 +74,62 @@ void menu() {
                 system("pause");
                 break;
 
-            case 8:
+            case 8: {
+				
                 printf("\nUsted selecciono el Programa 8\n");
+                system("cls");
+                printf("--- PROGRAMA DE ANGEL LARA ---\n");
+                printf("--- Uso de la cadena Strchr ---\n");
+                // 1. Declarar variables simples
+                char cadena[50];
+                char letra;
+                char *resultado; 
+                int tieneNumero = 0; // Variable bandera (0 = limpio, 1 = error)
+
+                // 2. Pedir una sola palabra unida
+                printf("Ingrese una palabra (sin espacios): ");
+                cin >> cadena;
+
+                // 3.  Revisar si ingresan numeros en vez de letras
+                for(int i = 0; cadena[i] != '\0'; i++) {
+                    if(cadena[i] >= '0' && cadena[i] <= '9') {
+                        tieneNumero = 1; // Encontro un numero
+                        break;
+                    }
+                }
+
+                // 4. Si tiene numeros, muestra error y no hace nada mas
+                if(tieneNumero == 1) {
+                    printf("\n[ERROR] No se permiten numeros. Ingrese solo texto.\n");
+                } 
+                else {
+                    // Si todo marcha bien sin errores, pide la letra y procesara
+                    printf("Ingrese la letra a buscar: ");
+                    cin >> letra;
+
+                    // Convertir todo a minusculas para evitar fallas de las letras mayusculas
+                    letra = tolower(letra);
+                    for(int i = 0; cadena[i] != '\0'; i++) {
+                        cadena[i] = tolower(cadena[i]);
+                    }
+
+                    // Usamos la funcion strchr
+                    resultado = strchr(cadena, letra);
+
+                    // Mostramos el resultado
+                    printf("\n RESULTADO \n");
+                    if (resultado != NULL) {
+                        printf("La letra si existe dentro de la frase.\n");
+                        printf("Texto desde esa letra en adelante: %s\n", resultado);
+                    } else {
+                        printf("La letra no se encontro.\n");
+                    }
+                }
+
+                printf("\n");
                 system("pause");
                 break;
-
+                }
             case 9:
                 printf("\nUsted selecciono el Programa 9\n");
                 system("pause");
