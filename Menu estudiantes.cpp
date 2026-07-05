@@ -157,7 +157,24 @@ void menu() {
 
             case 14:
                 printf("\nUsted selecciono el Programa 14\n");
-                system("pause");
+                system("cls");
+				printf("\n--- PROGRAMA DE BRITANY QUISPE ---\n");
+    			printf("--- Uso de la funcion strncmp ---\n\n");
+    			char cadena1[50];
+    			char cadena2[50];
+    			int n;
+    			printf("Ingrese la primera palabra: ");
+    			scanf("%s", cadena1);
+    			printf("Ingrese la segunda palabra: ");
+    			scanf("%s", cadena2);
+    			printf("¿Cuantos caracteres desea comparar?: ");
+    			scanf("%d", &n);
+    			if (strncmp(cadena1, cadena2, n) == 0){
+    			    printf("\nLas primeras %d letras son iguales.\n", n);
+    			} else {
+    			    printf("\nLas primeras %d letras son diferentes.\n", n);
+    			}
+    			system("pause");
                 break;
 
             case 15:
