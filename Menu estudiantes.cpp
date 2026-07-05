@@ -249,6 +249,7 @@ void menu() {
 
             case 18: {
     			printf("\nUsted selecciono el Programa 16\n");
+    			printf("Codigo actualizado por Bernabe\n");
                 system("pause");
                 break;
             case 19:
