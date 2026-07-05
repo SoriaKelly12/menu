@@ -248,10 +248,45 @@ void menu() {
                 break;
 
             case 18: {
-    			printf("\nUsted selecciono el Programa 16\n");
-    			printf("Codigo actualizado por Bernabe\n");
-                system("pause");
-                break;
+
+                 printf("\nUsted selecciono el Programa 18\n");
+                 system("cls");
+                 printf("--- PROGRAMA DE BERNABE TIMARAN ---\n");
+                 printf("--- Uso manual de la funcion strcat ---\n\n");
+
+                 char cadena1[100];
+                 char cadena2[100];
+
+                 printf("Ingrese la primera palabra: ");
+                 scanf("%s", cadena1);
+
+                 printf("Ingrese la segunda palabra: ");
+                 scanf("%s", cadena2);
+
+                 int i = 0;
+                 int j = 0;
+
+                 while(cadena1[i] != '\0')
+                 {
+                 i++;
+                 }
+
+                 while(cadena2[j] != '\0')
+                 {
+                 cadena1[i] = cadena2[j];
+                 i++;
+                 j++;
+                 }
+
+                 cadena1[i] = '\0';
+
+                 printf("\nRESULTADO\n");
+                 printf("La cadena concatenada es: %s\n", cadena1);
+
+                 printf("\n");
+                 system("pause");
+                 break;
+                 }
             case 19:
                 printf("\nUsted selecciono el Programa 19\n");
                 system("pause");
