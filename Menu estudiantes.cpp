@@ -59,11 +59,35 @@ void menu() {
                 system("pause");
                 break;
 
-            case 5:
-                printf("\nUsted selecciono el Programa 5\n");
-                system("pause");
-                break;
+            case 5: {
+               printf("\nUsted selecciono el Programa 5\n");
+               system("cls");
+               printf("--- PROGRAMA DE Josue Correa ---\n");
+               printf("--- Uso de la funcion strcmp ---\n");
 
+              // 1. Declarar variables
+            char cadena1[50];
+            char cadena2[50];
+            printf("Ingrese la primera palabra (sin espacios): ");
+            cin >> cadena1;
+            printf("Ingrese la segunda palabra (sin espacios): ");
+            cin >> cadena2;
+    
+               // 2. Comparar con strcmp
+            int comparacion = strcmp(cadena1, cadena2);
+    
+               // 3. Mostrar resultado
+            printf("\n RESULTADO \n");
+             if(comparacion == 0) {
+             printf("Las palabras son IGUALES.\n");
+        } 
+             else {
+             printf("Las palabras son DIFERENTES.\n");
+        }
+            printf("\n");
+            system("pause");
+            break;
+         }
             case 6:
                 printf("\nUsted selecciono el Programa 6\n");
                 system("pause");
