@@ -59,11 +59,35 @@ void menu() {
                 system("pause");
                 break;
 
-            case 5:
-                printf("\nUsted selecciono el Programa 5\n");
-                system("pause");
-                break;
+            case 5: {
+               printf("\nUsted selecciono el Programa 5\n");
+               system("cls");
+               printf("--- PROGRAMA DE Josue Correa ---\n");
+               printf("--- Uso de la funcion strcmp ---\n");
 
+              // 1. Declarar variables
+            char cadena1[50];
+            char cadena2[50];
+            printf("Ingrese la primera palabra (sin espacios): ");
+            cin >> cadena1;
+            printf("Ingrese la segunda palabra (sin espacios): ");
+            cin >> cadena2;
+    
+               // 2. Comparar con strcmp
+            int comparacion = strcmp(cadena1, cadena2);
+    
+               // 3. Mostrar resultado
+            printf("\n RESULTADO \n");
+             if(comparacion == 0) {
+             printf("Las palabras son IGUALES.\n");
+        } 
+             else {
+             printf("Las palabras son DIFERENTES.\n");
+        }
+            printf("\n");
+            system("pause");
+            break;
+         }
             case 6:
                 printf("\nUsted selecciono el Programa 6\n");
                 system("pause");
@@ -188,7 +212,24 @@ void menu() {
 
             case 14:
                 printf("\nUsted selecciono el Programa 14\n");
-                system("pause");
+                system("cls");
+				printf("\n--- PROGRAMA DE BRITANY QUISPE ---\n");
+    			printf("--- Uso de la funcion strncmp ---\n\n");
+    			char cadena1[50];
+    			char cadena2[50];
+    			int n;
+    			printf("Ingrese la primera palabra: ");
+    			scanf("%s", cadena1);
+    			printf("Ingrese la segunda palabra: ");
+    			scanf("%s", cadena2);
+    			printf("¿Cuantos caracteres desea comparar?: ");
+    			scanf("%d", &n);
+    			if (strncmp(cadena1, cadena2, n) == 0){
+    			    printf("\nLas primeras %d letras son iguales.\n", n);
+    			} else {
+    			    printf("\nLas primeras %d letras son diferentes.\n", n);
+    			}
+    			system("pause");
                 break;
 
             case 15:
@@ -206,10 +247,46 @@ void menu() {
                 system("pause");
                 break;
 
-            case 18:
-                printf("\nUsted selecciono el Programa 18\n");
-                system("pause");
-                break;
+            case 18: {
+
+    printf("\nUsted selecciono el Programa 18\n");
+    system("cls");
+    printf("--- PROGRAMA DE BERNABE TIMARAN ---\n");
+    printf("--- Uso manual de la funcion strcat ---\n\n");
+
+    char cadena1[100];
+    char cadena2[100];
+
+    printf("Ingrese la primera palabra: ");
+    scanf("%s", cadena1);
+
+    printf("Ingrese la segunda palabra: ");
+    scanf("%s", cadena2);
+
+    int i = 0;
+    int j = 0;
+
+    while(cadena1[i] != '\0')
+    {
+        i++;
+    }
+
+    while(cadena2[j] != '\0')
+    {
+        cadena1[i] = cadena2[j];
+        i++;
+        j++;
+    }
+
+    cadena1[i] = '\0';
+
+    printf("\nRESULTADO\n");
+    printf("La cadena concatenada es: %s\n", cadena1);
+
+    printf("\n");
+    system("pause");
+    break;
+}
 
             case 19:
                 printf("\nUsted selecciono el Programa 19\n");
