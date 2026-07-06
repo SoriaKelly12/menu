@@ -246,7 +246,7 @@ void menu() {
                 break;
 
             case 12:
-                printf("\nUsted selecciono el Programa 12\n");
+                prinf("\nUsted selecciono el Programa 12\n");
                 system("pause");
                 break;
 
