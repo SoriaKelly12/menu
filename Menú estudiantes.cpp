@@ -73,9 +73,24 @@ void menu() {
 			break;
 			
             case 2:
-                printf("\nUsted selecciono el Programa 2\n");
-                system("pause");
-                break;
+            printf("\nUsted selecciona el Programa 1\n");
+            system("cls");
+
+            printf("\n--- PROGRAMA DE KEYLA ALMACHE ---\n");
+            printf("--- Uso de la funcion strcpy() ---\n\n");
+
+            char origenKeyla[100];
+            char destinoKeyla[100];
+
+            printf("Ingrese una cadena: ");
+            gets(origenKeyla);
+
+            strcpy(destinoKeyla, origenKeyla);
+
+             printf("\nCadena copiada: %s\n", destinoKeyla);
+
+            system("pause");
+            break;
 
             case 3: {
                 system("cls");
