@@ -351,10 +351,24 @@ void menu() {
                 system("pause");
                 break;
 
-            case 17:
-                printf("\nUsted selecciono el Programa 17\n");
-                system("pause");
-                break;
+            case 17:{
+			printf("\nUsted selecciono el Programa 17\n");
+			system("cls");
+			printf("---PROGRAMA DE KELLY SORIA---\n");
+			printf("---USO DE LA FUNCION MEMSET---\n");
+			char nombre[30];
+			printf("Ingrese su nombre: ");
+			fgets(nombre, sizeof(nombre), stdin);
+			printf("Nombre ingresado: %s", nombre);
+			// BORRAR el contenido con memset
+			 memset(nombre, 0, sizeof(nombre));
+			  printf("\nNombre borrado con memset: '%s'\n", nombre);
+			  printf("Ingrese otro nombre: ");
+			  fgets(nombre, sizeof(nombre), stdin);
+			  printf("Nuevo nombre: %s", nombre);
+			  system("pause");
+			  break;
+			  }
 
             case 18: {
 
