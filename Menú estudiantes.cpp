@@ -461,10 +461,36 @@ void menu() {
 				}
 
  
-            case 16:
-                printf("\nUsted selecciono el Programa 16\n");
-                system("pause");
-                break;
+            case 16:{
+                  	  system("cls");
+    			printf("\n--- PROGRAMA DE JONATHAN SILVA ---\n");
+   			 printf("--- IMPLEMENTACIÓN PROPIA DE strncat ---\n\n");
+    
+   			 // ===== DECLARAR VARIABLES =====
+   			 char destino[100] = "Hola, ";
+   			 char origen[100] = "Mundo";
+   			 int n;
+    
+    			// ===== MOSTRAR VALORES INICIALES =====
+   			 printf("Cadena destino original: \"%s\"\n", destino);
+   			 printf("Cadena origen: \"%s\"\n", origen);
+    
+    			// ===== PEDIR CUÁNTOS CARACTERES CONCATENAR =====
+    			printf("¿Cuántos caracteres desea concatenar? ");
+   			scanf("%d", &n);
+    
+  			// ===== LLAMAR A MI FUNCIÓN =====
+   			mi_strncat(destino, origen, n);
+    
+    			// ===== MOSTRAR RESULTADO =====
+    			printf("\nRESULTADO\n");
+    			printf("Cadena final concatenada: \"%s\"\n", destino);
+    
+   	 		printf("\n");
+    			system("pause");
+    			break;
+		}
+
 
             case 17:{
 			printf("\nUsted selecciono el Programa 17\n");
@@ -602,6 +628,23 @@ char *strpbrk1(const char *cadena, const char *buscar)
 
      }
 // FIN DEL PROTOTIPO//
+
+// MI FUNCIÓN STRNCAT - AGREGADA POR JONATHAN SILVA
+char* mi_strncat(char* destino, const char* origen, size_t n) {
+    size_t len_destino = 0;
+    while (destino[len_destino] != '\0') {
+        len_destino++;
+    }
+    
+    size_t i = 0;
+    while (i < n && origen[i] != '\0') {
+        destino[len_destino + i] = origen[i];
+        i++;
+    }
+    
+    destino[len_destino + i] = '\0';
+    return destino;
+}
 int main() {
     menu();
     return 0;
