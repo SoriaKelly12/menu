@@ -405,9 +405,21 @@ void menu() {
                 break;
 
             case 13:
-                printf("\nUsted selecciono el Programa 13\n");
-                system("pause");
-                break;
+            printf("\nUsted selecciona el Programa 2\n");
+            system("cls");
+
+           printf("\n--- PROGRAMA DE KRISTEN NARANJO ---\n");
+           printf("--- Uso de la funcion strlen() ---\n\n");
+
+           char textoKristen[100];
+
+           printf("Ingrese una cadena: ");
+           gets(textoKristen);
+
+           printf("\nLa cantidad de caracteres es: %d\n", strlen(textoKristen));
+
+           system("pause");
+           break;
 
             case 14:
                 printf("\nUsted selecciono el Programa 14\n");
