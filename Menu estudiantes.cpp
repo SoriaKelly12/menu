@@ -276,12 +276,37 @@ void menu() {
     			}
     			system("pause");
                 break;
+			
+			case 15:{
+				printf("\nUsted selecciono el Programa 15\n");
+				system("cls");
+				printf("--- PROGRAMA DE CRISTOPHER SEGURA ---\n");
+				printf("--- Uso de la funcion strtok ---\n\n");
 
-            case 15:
-                printf("\nUsted selecciono el Programa 15\n");
-                system("pause");
-                break;
+				char cadena[100];
+				char *token;
 
+				cin.ignore();
+
+				printf("Ingrese una frase: ");
+				cin.getline(cadena, 100);
+
+				token = strtok(cadena, " ");
+
+				printf("\nRESULTADO\n");
+
+				while (token != NULL)
+					{
+						printf("%s\n", token);
+						token = strtok(NULL, " ");
+						}
+
+				printf("\n");
+				system("pause");
+				break;
+				}
+
+ 
             case 16:
                 printf("\nUsted selecciono el Programa 16\n");
                 system("pause");
