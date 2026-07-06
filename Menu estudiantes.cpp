@@ -232,7 +232,17 @@ void menu() {
                 break;
             case 11:
                 printf("\nUsted selecciono el Programa 11\n");
-                system("pause");
+                system("cls");
+				printf("\n---PROGRAMA DE JULIXA MUÑOZ---\n");
+				printf("--- Uso de la funcion clear()---\n\n");
+				string cadena;
+				
+				cout << "Ingrese una cadena:";
+				cin >> cadena;
+				cout <<"\nCadena antes de clear():"<< cadena << endl;
+				cadena.clear();
+				cout << "cadena despues de clear():" << cadena << endl;
+				system("pause");
                 break;
 
             case 12:
