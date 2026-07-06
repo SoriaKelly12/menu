@@ -41,19 +41,89 @@ void menu() {
 
         switch(op) {
             case 1:
-                printf("\nUsted selecciono el Programa 1\n");
-                system("pause");
-                break;
-
+			printf("\nUsted selecciona el Programa 1\n");
+			system("cls");
+			
+			printf("\n--- PROGRAMA DE MARY AGURTO ---\n");
+			printf("--- Uso de la funcion strrchr() ---\n\n");
+			
+			char textoMary[100];
+			char letraMary;
+			char *punteroMary;
+			
+			printf("Ingrese una cadena: ");
+			fflush(stdin);
+			gets(textoMary);
+			
+			printf("Ingrese un caracter a buscar: ");
+			scanf(" %c", &letraMary);
+			
+			punteroMary = strrchr(textoMary, letraMary);
+			
+			if (punteroMary != NULL)
+			{
+			printf("\nLa ultima aparicion del caracter '%c' se encuentra en:\n", letraMary);
+			printf("%s\n", punteroMary);
+			printf("Posicion: %d\n", punteroMary - textoMary);
+			}
+			else
+			{
+			printf("\nEl caracter '%c' no se encuentra en la cadena.\n", letraMary);
+			}
+			system("pause");
+			break;
+			
             case 2:
-                printf("\nUsted selecciono el Programa 2\n");
-                system("pause");
-                break;
+            printf("\nUsted selecciona el Programa 1\n");
+            system("cls");
 
-            case 3:
-                printf("\nUsted selecciono el Programa 3\n");
+            printf("\n--- PROGRAMA DE KEYLA ALMACHE ---\n");
+            printf("--- Uso de la funcion strcpy() ---\n\n");
+
+            char origenKeyla[100];
+            char destinoKeyla[100];
+
+            printf("Ingrese una cadena: ");
+            gets(origenKeyla);
+
+            strcpy(destinoKeyla, origenKeyla);
+
+             printf("\nCadena copiada: %s\n", destinoKeyla);
+
+            system("pause");
+            break;
+
+            case 3: {
+                system("cls");
+                printf("======== PROGRAMA CASO 3 ========\n");
+                printf("--- PROGRAMA DE ROSMERY ALVAREZ ---\n");
+                printf("--- USO DE LA FUNCION STRRCHR ---\n\n");
+
+                char cadena[50];
+                char buscar;
+                char *resultado;
+
+                printf("Ingrese una palabra (sin espacios): ");
+                scanf("%s", cadena);
+
+                printf("Ingrese el caracter a buscar: ");
+                scanf(" %c", &buscar);
+
+                resultado = strrchr(cadena, buscar);
+
+                printf("\nRESULTADO:\n");
+                if (resultado != NULL) {
+                    printf("Se encontro el caracter.\n");
+                    printf("Posicion: %d\n", resultado - cadena + 1);
+                    printf("Texto desde esa aparicion: %s\n", resultado);
+                } else {
+                    printf("No se encontro el caracter en la cadena.\n");
+                }
+
+                printf("\n");
                 system("pause");
                 break;
+            }
 
             case 4: {
                  printf("\nUsted selecciono el Programa 4\n");
@@ -115,11 +185,42 @@ void menu() {
             system("pause");
             break;
          }
-            case 6:
-                printf("\nUsted selecciono el Programa 6\n");
-                system("pause");
-                break;
+            case 6: {
+            cout << "\n--- Opcion 6: Juan Guzman (strpbrk manual) ---\n";
+            
+            // 1. Textos de prueba
+            char texto[] = "Juan_Guzman@2026";
+            char simbolos[] = "@_#"; 
+            
+            // 2. Variables para buscar
+            bool encontrado = false;
+            char simbolo_encontrado;
+            int posicion_encontrada;
 
+            // (bucle anidado)
+            for (int i = 0; texto[i] != '\0'; i++) {
+                for (int j = 0; simbolos[j] != '\0'; j++) {
+                    if (texto[i] == simbolos[j]) {
+                        encontrado = true;
+                        simbolo_encontrado = texto[i];
+                        posicion_encontrada = i;
+                        break; 
+                    }
+                }
+                if (encontrado) break; 
+            }
+
+            if (encontrado) {
+                cout << "Se encontro el simbolo '" << simbolo_encontrado 
+                     << "' en la posicion " << posicion_encontrada << "\n";
+            } else {
+                cout << "No se encontro ningun simbolo de la lista.\n";
+            }
+            
+            cout << "\nPresione una tecla para volver al menu...";
+            system("pause>nul"); 
+            break;
+        }
             case 7:{
                 printf("\nUsted selecciono el Programa 7\n");
                 system("cls");
@@ -253,10 +354,24 @@ void menu() {
 
                 }
 
-            case 10:
-                printf("\nUsted selecciono el Programa 10\n");
-                system("pause");
-                break;
+            case 10:{
+			
+			system("cls");
+			printf("--- PROGRAMA DE MELVIN MERINO ---\n");
+			printf("--- EJEMPLO CON HOLA MUNDO ---\n");
+			
+			string texto = "Hola Mundo";
+			int inicio = 0;
+			int longitud = 4;
+			
+			string resultado = texto.substr(inicio, longitud);
+			
+			printf("Cadena original: %s\n", texto.c_str());
+			printf("Resultado (substr de 0 a 4): %s\n", resultado.c_str());
+			system("pause");
+			break;
+			 }
+			 
             case 11:
                 printf("\nUsted selecciono el Programa 11\n");
                 system("cls");
@@ -273,14 +388,65 @@ void menu() {
                 break;
 
             case 12:
-                printf("\nUsted selecciono el Programa 12\n");
+				printf("\nUsted selecciono el Programa 12\n");
+                system("pause");
+                printf("\n--- PROGRAMA DE PAULA MURILLO ---\n");
+                printf("--- Uso de la funcion tolower ---\n");
+                
+                char cadena1[60];
+                char cadena2[60];
+                int tieneNumero = 0; 
+
+                // Pedir una sola palabra unida
+                printf("Ingrese una palabra en MAYUSCULAS (sin espacios): ");
+                cin >> cadena1;
+
+                // Revisar si ingresan numeros en vez de letras
+                for(int i = 0; cadena1[i] != '\0'; i++) {
+                    if(cadena1[i] >= '0' && cadena1[i] <= '9') {
+                        tieneNumero = 1; // Encontro un numero
+                        break;
+                    }
+                }
+
+                // Si tiene numeros, muestra error y no hace nada mas
+                if(tieneNumero == 1) {
+                    printf("\n[ERROR] No se permiten numeros. Ingrese solo texto.\n");
+                } 
+                else {
+                    int i;
+                    for(i = 0; cadena1[i] != '\0'; i++) {
+                        cadena2[i] = tolower(cadena1[i]);
+                    }
+                    // Añadimos el caracter nulo para cerrar correctamente la cadena2
+                    cadena2[i] = '\0';
+
+                    // Mostramos el resultado
+                    printf("\n RESULTADO \n");
+                    printf("Cadena original: %s\n", cadena1);
+                    printf("Cadena en minusculas: %s\n", cadena2);
+                }
+
+                printf("\n");
                 system("pause");
                 break;
 
             case 13:
-                printf("\nUsted selecciono el Programa 13\n");
-                system("pause");
-                break;
+            printf("\nUsted selecciona el Programa 2\n");
+            system("cls");
+
+           printf("\n--- PROGRAMA DE KRISTEN NARANJO ---\n");
+           printf("--- Uso de la funcion strlen() ---\n\n");
+
+           char textoKristen[100];
+
+           printf("Ingrese una cadena: ");
+           gets(textoKristen);
+
+           printf("\nLa cantidad de caracteres es: %d\n", strlen(textoKristen));
+
+           system("pause");
+           break;
 
             case 14:
                 printf("\nUsted selecciono el Programa 14\n");
@@ -339,10 +505,24 @@ void menu() {
                 system("pause");
                 break;
 
-            case 17:
-                printf("\nUsted selecciono el Programa 17\n");
-                system("pause");
-                break;
+            case 17:{
+			printf("\nUsted selecciono el Programa 17\n");
+			system("cls");
+			printf("---PROGRAMA DE KELLY SORIA---\n");
+			printf("---USO DE LA FUNCION MEMSET---\n");
+			char nombre[30];
+			printf("Ingrese su nombre: ");
+			fgets(nombre, sizeof(nombre), stdin);
+			printf("Nombre ingresado: %s", nombre);
+			// BORRAR el contenido con memset
+			 memset(nombre, 0, sizeof(nombre));
+			  printf("\nNombre borrado con memset: '%s'\n", nombre);
+			  printf("Ingrese otro nombre: ");
+			  fgets(nombre, sizeof(nombre), stdin);
+			  printf("Nuevo nombre: %s", nombre);
+			  system("pause");
+			  break;
+			  }
 
             case 18: {
 
