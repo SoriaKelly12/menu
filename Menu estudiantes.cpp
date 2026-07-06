@@ -40,10 +40,38 @@ void menu() {
 
         switch(op) {
             case 1:
-                printf("\nUsted selecciono el Programa 1\n");
-                system("pause");
-                break;
-
+			printf("\nUsted selecciona el Programa 1\n");
+			system("cls");
+			
+			printf("\n--- PROGRAMA DE MARY AGURTO ---\n");
+			printf("--- Uso de la funcion strrchr() ---\n\n");
+			
+			char textoMary[100];
+			char letraMary;
+			char *punteroMary;
+			
+			printf("Ingrese una cadena: ");
+			fflush(stdin);
+			gets(textoMary);
+			
+			printf("Ingrese un caracter a buscar: ");
+			scanf(" %c", &letraMary);
+			
+			punteroMary = strrchr(textoMary, letraMary);
+			
+			if (punteroMary != NULL)
+			{
+			printf("\nLa ultima aparicion del caracter '%c' se encuentra en:\n", letraMary);
+			printf("%s\n", punteroMary);
+			printf("Posicion: %d\n", punteroMary - textoMary);
+			}
+			else
+			{
+			printf("\nEl caracter '%c' no se encuentra en la cadena.\n", letraMary);
+			}
+			system("pause");
+			break;
+			
             case 2:
                 printf("\nUsted selecciono el Programa 2\n");
                 system("pause");
