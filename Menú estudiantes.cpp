@@ -372,7 +372,7 @@ void menu() {
 			break;
 			 }
 			 
-            case 11:
+            case 11:{
                 printf("\nUsted selecciono el Programa 11\n");
                 system("cls");
 				printf("\n---PROGRAMA DE JULIXA MUÑOZ---\n");
@@ -386,7 +386,7 @@ void menu() {
 				cout << "cadena despues de clear():" << cadena << endl;
 				system("pause");
                 break;
-
+			}
             case 12:
 				printf("\nUsted selecciono el Programa 12\n");
                 system("pause");
@@ -448,7 +448,7 @@ void menu() {
            system("pause");
            break;
 
-            case 14:
+            case 14:{
                 printf("\nUsted selecciono el Programa 14\n");
                 system("cls");
 				printf("\n--- PROGRAMA DE BRITANY QUISPE ---\n");
@@ -469,7 +469,7 @@ void menu() {
     			}
     			system("pause");
                 break;
-			
+			}
 			case 15:{
 				printf("\nUsted selecciono el Programa 15\n");
 				system("cls");
