@@ -246,7 +246,46 @@ void menu() {
                 break;
 
             case 12:
-                printf("\nUsted selecciono el Programa 12\n");
+				printf("\nUsted selecciono el Programa 12\n");
+                system("pause");
+                printf("\n--- PROGRAMA DE PAULA MURILLO ---\n");
+                printf("--- Uso de la funcion tolower ---\n");
+                
+                char cadena1[60];
+                char cadena2[60];
+                int tieneNumero = 0; 
+
+                // Pedir una sola palabra unida
+                printf("Ingrese una palabra en MAYUSCULAS (sin espacios): ");
+                cin >> cadena1;
+
+                // Revisar si ingresan numeros en vez de letras
+                for(int i = 0; cadena1[i] != '\0'; i++) {
+                    if(cadena1[i] >= '0' && cadena1[i] <= '9') {
+                        tieneNumero = 1; // Encontro un numero
+                        break;
+                    }
+                }
+
+                // Si tiene numeros, muestra error y no hace nada mas
+                if(tieneNumero == 1) {
+                    printf("\n[ERROR] No se permiten numeros. Ingrese solo texto.\n");
+                } 
+                else {
+                    int i;
+                    for(i = 0; cadena1[i] != '\0'; i++) {
+                        cadena2[i] = tolower(cadena1[i]);
+                    }
+                    // Añadimos el caracter nulo para cerrar correctamente la cadena2
+                    cadena2[i] = '\0';
+
+                    // Mostramos el resultado
+                    printf("\n RESULTADO \n");
+                    printf("Cadena original: %s\n", cadena1);
+                    printf("Cadena en minusculas: %s\n", cadena2);
+                }
+
+                printf("\n");
                 system("pause");
                 break;
 
@@ -312,10 +351,24 @@ void menu() {
                 system("pause");
                 break;
 
-            case 17:
-                printf("\nUsted selecciono el Programa 17\n");
-                system("pause");
-                break;
+            case 17:{
+			printf("\nUsted selecciono el Programa 17\n");
+			system("cls");
+			printf("---PROGRAMA DE KELLY SORIA---\n");
+			printf("---USO DE LA FUNCION MEMSET---\n");
+			char nombre[30];
+			printf("Ingrese su nombre: ");
+			fgets(nombre, sizeof(nombre), stdin);
+			printf("Nombre ingresado: %s", nombre);
+			// BORRAR el contenido con memset
+			 memset(nombre, 0, sizeof(nombre));
+			  printf("\nNombre borrado con memset: '%s'\n", nombre);
+			  printf("Ingrese otro nombre: ");
+			  fgets(nombre, sizeof(nombre), stdin);
+			  printf("Nuevo nombre: %s", nombre);
+			  system("pause");
+			  break;
+			  }
 
             case 18: {
 
@@ -357,10 +410,40 @@ void menu() {
                  system("pause");
                  break;
                  }
-            case 19:
-                printf("\nUsted selecciono el Programa 19\n");
-                system("pause");
-                break;
+            case 19:{
+                 
+                  printf("\nUsted selecciono el Programa 19\n");
+                  system("cls");
+                  printf("--- PROGRAMA DE Melany Vinueza ---\n");
+                  printf("--- Uso de la funcion strtok ---\n");
+
+                  char cadena[100];
+                  char *token;
+
+                  printf("Ingrese una frase corta (con espacios): ");
+    
+                  cin.clear();
+                  fflush(stdin); 
+    
+                  cin.getline(cadena, 100);
+    
+                  printf("\n--- RESULTADO (Palabras separadas) ---\n");
+   
+                  token = strtok(cadena, " ");
+
+                  int i = 1;
+   
+                  while (token != NULL) {
+                      printf("Palabra %d: %s\n", i, token);
+        
+                      token = strtok(NULL, " ");
+                      i++;
+                  }
+
+                  printf("\n");
+                  system("pause");
+                  break;
+                }
 
             case 20:
                 printf("\nUsted selecciono el Programa 20\n");
