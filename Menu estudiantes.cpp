@@ -257,10 +257,24 @@ void menu() {
 
                 }
 
-            case 10:
-                printf("\nUsted selecciono el Programa 10\n");
-                system("pause");
-                break;
+            case 10:{
+			
+			system("cls");
+			printf("--- PROGRAMA DE MELVIN MERINO ---\n");
+			printf("--- EJEMPLO CON HOLA MUNDO ---\n");
+			
+			string texto = "Hola Mundo";
+			int inicio = 0;
+			int longitud = 4;
+			
+			string resultado = texto.substr(inicio, longitud);
+			
+			printf("Cadena original: %s\n", texto.c_str());
+			printf("Resultado (substr de 0 a 4): %s\n", resultado.c_str());
+			system("pause");
+			break;
+			 }
+			 
             case 11:
                 printf("\nUsted selecciono el Programa 11\n");
                 system("cls");
