@@ -93,11 +93,46 @@ void menu() {
                 system("pause");
                 break;
 
-            case 7:
+            case 7:{
                 printf("\nUsted selecciono el Programa 7\n");
+                system("cls");
+                printf("--- PROGRAMA DE EMERSON JAMI ---\n");
+                printf("--- Uso de strncat con punteros ---\n\n");
+                
+                char dest[100];
+                char src[100];
+                int n;
+
+                printf("Ingrese la primera palabra (destino): ");
+                cin >> dest;
+                printf("Ingrese la segunda palabra (origen): ");
+                cin >> src;
+                printf("Cuantos caracteres desea concatenar?: ");
+                cin >> n;
+
+                char *pDest = dest;
+                char *pSrc = src;
+
+                while(*pDest != '\0') {
+                    pDest++;
+                }
+
+                while(n > 0 && *pSrc != '\0') {
+                    *pDest = *pSrc;
+                    pDest++;
+                    pSrc++;
+                    n--;
+                }
+
+                *pDest = '\0';
+
+                printf("\nRESULTADO\n");
+                printf("La cadena final concatenada es: %s\n", dest);
+
+                printf("\n");
                 system("pause");
                 break;
-
+            }
             case 8: {
 				
                 printf("\nUsted selecciono el Programa 8\n");
@@ -171,7 +206,7 @@ void menu() {
                 printf("Ingrese los caracteres a buscar: ");
                 cin >> buscar;
 
-                printf resultado = strpbrk1(cadena, buscar);
+                resultado = strpbrk1(cadena, buscar);
                 printf("\nRESULTADO\n");
 
 
