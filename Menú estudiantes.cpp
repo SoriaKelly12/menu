@@ -686,7 +686,24 @@ char *strstr4(const char *cadena, const char *subcadena)
     }
     return NULL;
 }
-
+// ===================================================
+// MI FUNCIÓN STRNCAT - AGREGADA POR JONATHAN SILVA
+// ===================================================
+char* mi_strncat(char* destino, const char* origen, size_t n) {
+    size_t len_destino = 0;
+    while (destino[len_destino] != '\0') {
+        len_destino++;
+    }
+    
+    size_t i = 0;
+    while (i < n && origen[i] != '\0') {
+        destino[len_destino + i] = origen[i];
+        i++;
+    }
+    
+    destino[len_destino + i] = '\0';
+    return destino;
+}
 
 
 
