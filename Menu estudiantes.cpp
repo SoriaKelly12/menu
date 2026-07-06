@@ -88,11 +88,42 @@ void menu() {
             system("pause");
             break;
          }
-            case 6:
-                printf("\nUsted selecciono el Programa 6\n");
-                system("pause");
-                break;
+            case 6: {
+            cout << "\n--- Opcion 6: Juan Guzman (strpbrk manual) ---\n";
+            
+            // 1. Textos de prueba
+            char texto[] = "Juan_Guzman@2026";
+            char simbolos[] = "@_#"; 
+            
+            // 2. Variables para buscar
+            bool encontrado = false;
+            char simbolo_encontrado;
+            int posicion_encontrada;
 
+            // (bucle anidado)
+            for (int i = 0; texto[i] != '\0'; i++) {
+                for (int j = 0; simbolos[j] != '\0'; j++) {
+                    if (texto[i] == simbolos[j]) {
+                        encontrado = true;
+                        simbolo_encontrado = texto[i];
+                        posicion_encontrada = i;
+                        break; 
+                    }
+                }
+                if (encontrado) break; 
+            }
+
+            if (encontrado) {
+                cout << "Se encontro el simbolo '" << simbolo_encontrado 
+                     << "' en la posicion " << posicion_encontrada << "\n";
+            } else {
+                cout << "No se encontro ningun simbolo de la lista.\n";
+            }
+            
+            cout << "\nPresione una tecla para volver al menu...";
+            system("pause>nul"); 
+            break;
+        }
             case 7:{
                 printf("\nUsted selecciono el Programa 7\n");
                 system("cls");
