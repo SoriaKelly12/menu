@@ -661,7 +661,7 @@ char *strstr4(const char *cadena, const char *subcadena)
     return NULL;
 }
 
-
+f
 
 
 int main() {
