@@ -77,40 +77,37 @@ void menu() {
                 system("pause");
                 break;
 
-            case 3:
-				printf("\nUsted selecciono el Programa 3\n");
-    			system("cls");
-    			printf("---PROGRAMA DE ROUS---\n");
-    			printf("---USO DE LA FUNCION STRRCHR---\n");
+            caso 3: {
+    		sistema("clase");
+    		imprimirf("======== PROGRAMA CASO 3 ========\n");
+    		imprimirf("--- PROGRAMA DE ROUSMERY ALVAREZ ---\n");
+    		imprimirf("--- USO DE LA FUNCION STRRCHR ---\n\n");
 
-    			char cadena[50];
-    			char buscar;
-    			char *resultado;
+    		carbonizarse cadena[50];
+    		carbonizarse buscar;
+    		carbonizarse *resultado;
 
-    			printf("Ingrese una palabra (sin espacios): ");
-    			scanf("%s", cadena);
+    		imprimirf("Ingrese una palabra (sin espacios): ");
+    		escanearf("%s", cadena);
 
-    			printf("Ingrese el caracter a buscar: ");
-    			scanf(" %c", &buscar);
+    		imprimirf("Ingrese el caracter a buscar: ");
+    		escanearf(" %c", &buscar);
 
-    			resultado = strrchr(cadena, buscar);
+    		resultado = strrchr(cadena, buscar);
 
-    			printf("\nRESULTADO\n");
+    		imprimirf("\nRESULTADO:\n");
+    		si (resultado != NULO) {
+        		imprimirf("Se encontro el caracter.\n");
+        		imprimirf("Posicion: %d\n", resultado - cadena + 1);
+        		imprimirf("Texto desde esa aparicion: %s\n", resultado);
+    		} demas {
+        		imprimirf("No se encontro el caracter en la cadena.\n");
+    		}
 
-    			if(resultado != NULL)
-    			{
-        			printf("Se encontro el caracter.\n");
-        			printf("Posicion: %d\n", resultado - cadena + 1);
-        			printf("Texto desde la ultima aparicion: %s\n", resultado);
-    			}
-    			else
-    			{
-        			printf("No se encontro el caracter en la cadena.\n");
-    			}
-
-    			printf("\n");
-    			system("pause");
-    			break;
+    		imprimirf("\n");
+    		sistema("pausa");
+    		romper;
+	}
 
             case 4:
                 printf("\nUsted selecciono el Programa 4\n");
