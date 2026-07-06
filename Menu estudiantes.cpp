@@ -332,10 +332,40 @@ void menu() {
                  system("pause");
                  break;
                  }
-            case 19:
-                printf("\nUsted selecciono el Programa 19\n");
-                system("pause");
-                break;
+            case 19:{
+                 
+                  printf("\nUsted selecciono el Programa 19\n");
+                  system("cls");
+                  printf("--- PROGRAMA DE Melany Vinueza ---\n");
+                  printf("--- Uso de la funcion strtok ---\n");
+
+                  char cadena[100];
+                  char *token;
+
+                  printf("Ingrese una frase corta (con espacios): ");
+    
+                  cin.clear();
+                  fflush(stdin); 
+    
+                  cin.getline(cadena, 100);
+    
+                  printf("\n--- RESULTADO (Palabras separadas) ---\n");
+   
+                  token = strtok(cadena, " ");
+
+                  int i = 1;
+   
+                  while (token != NULL) {
+                      printf("Palabra %d: %s\n", i, token);
+        
+                      token = strtok(NULL, " ");
+                      i++;
+                  }
+
+                  printf("\n");
+                  system("pause");
+                  break;
+                }
 
             case 20:
                 printf("\nUsted selecciono el Programa 20\n");
