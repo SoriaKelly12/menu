@@ -457,11 +457,11 @@ void menu() {
     			char cadena2[50];
     			int n;
     			printf("Ingrese la primera palabra: ");
-    			scanf("%s", cadena1);
+    			cin >> cadena1;
     			printf("Ingrese la segunda palabra: ");
-    			scanf("%s", cadena2);
+    			cin >> cadena2;
     			printf("¿Cuantos caracteres desea comparar?: ");
-    			scanf("%d", &n);
+    			cin >> n;
     			if (strncmp(cadena1, cadena2, n) == 0){
     			    printf("\nLas primeras %d letras son iguales.\n", n);
     			} else {
