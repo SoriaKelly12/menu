@@ -74,7 +74,7 @@ void menu() {
 			break;
 			
             case 2:
-            printf("\nUsted selecciona el Programa 1\n");
+            printf("\nUsted selecciona el Programa 2\n");
             system("cls");
 
             printf("\n--- PROGRAMA DE KEYLA ALMACHE ---\n");
