@@ -6,6 +6,7 @@ using namespace std;
 
 void menu();
 char *strpbrk1(const char *cadena, const char *buscar);
+char *strstr4(const char *cadena, const char *subcadena);
 void menu() {
     int op;
 
@@ -54,10 +55,36 @@ void menu() {
                 system("pause");
                 break;
 
-            case 4:
-                printf("\nUsted selecciono el Programa 4\n");
-                system("pause");
-                break;
+            case 4: {
+                 printf("\nUsted selecciono el Programa 4\n");
+                 system("cls");
+                 printf("--- PROGRAMA DE JUAN ANDRADE ---\n");
+                 printf("--- Uso manual de la funcion strstr ---\n\n");
+
+                 char cadena[50];
+                 char buscar[50];
+                 char *resultado;
+
+                 printf("Ingrese una palabra o frase (sin espacios): ");
+                 cin >> cadena;
+
+                 printf("Ingrese la subcadena que desea buscar: ");
+                 cin >> buscar;
+
+                 resultado = strstr4(cadena, buscar);
+
+                 printf("\n RESULTADO \n");
+                 if (resultado != NULL) {
+                    printf("La subcadena si existe dentro del texto.\n");
+                    printf("Texto desde la coincidencia: %s\n", resultado);
+                 } else {
+                    printf("La subcadena no fue encontrada.\n");
+                   }
+
+                   printf("\n");
+                   system("pause");
+                   break;
+         }
 
             case 5: {
                printf("\nUsted selecciono el Programa 5\n");
@@ -434,6 +461,29 @@ char *strpbrk1(const char *cadena, const char *buscar)
 
      }
 // FIN DEL PROTOTIPO//
+
+// prototipo juan andrade 
+char *strstr4(const char *cadena, const char *subcadena)
+{
+    if (*subcadena == '\0') return (char *)cadena;
+
+    while (*cadena != '\0') {
+        const char *h = cadena;
+        const char *n = subcadena;
+
+        while (*h != '\0' && *n != '\0' && *h == *n) {
+            h++;
+            n++;
+        }
+        if (*n == '\0') return (char *)cadena;
+        cadena++;
+    }
+    return NULL;
+}
+
+
+
+
 int main() {
     menu();
     return 0;
